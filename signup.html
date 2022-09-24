@@ -56,26 +56,35 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-12 col-lg-6">
-    <div class="log">
+    <div class="log" style="height:42em">
         <img id="formlog"src="images/logo.png" alt="">
-    <form >
-        <div class="form-group">
-          
-            <input type="text" placeholder="Mobile number or email" class="form-control inp" id="exampleInputEmail1" >
+    <form action="signed.html" onsubmit="return signup()">
+      <div id="signemerr"></div>
+      <div class="form-group">
+            <input type="email" placeholder=" Email" class="form-control inp" id="signemail" >
             </div>
+            <div id="signpherr"></div>
             <div class="form-group">
-            
-              <input type="text" placeholder="Full name" class="form-control inp" id="exampleInputEmail1" >
+              <input type="tel" placeholder="Contact Number" class="form-control inp" id="signphn" >
               </div>
+              <div id="signuseerr"></div>
               <div class="form-group">
-            
-                  <input type="text" placeholder="username" class="form-control inp" id="exampleInputEmail1" >
+                  <input type="text" placeholder="username" class="form-control inp" id="signuser" >
                   </div>
+                  <div id="signpwderr"></div>
           <div class="form-group">
-            
-            <input type="password" placeholder=" set a password" class="form-control inp" id="exampleInputPassword1">
+            <input type="password" onfocus="Strength()" onblur="hide()" onkeyup="colour()" placeholder=" set a password" class="form-control inp" id="signpwd">
           </div>
-        
+          <div  id="colour"></div>
+        <div id="passvalid" style="display:none;">
+          <p>Password must contain :</p>
+          <ul>
+            <li id="length" style="color:red;"> Atleast 8 charecters</li>
+            <li id="upper" style="color:red;">Atleast one upper case letter</li>
+            <li id="lower" style="color:red;">Atleast one lower case letter</li>
+            <li id="number" style="color:red;">Atleast one number</li>
+          </ul>
+        </div>
         <button id="login"type="submit" class="btn btn-primary">Sign Up</button>
         <br>
         <p>By signing up, you agree to our Terms , Privacy Policy and Cookies Policy .</p>
@@ -88,7 +97,7 @@
 <!-- col -->
 <div class="col-sm-12 col-lg-6">
   
-    <div class="logsign">
+    <div class="logsign" style="height: 42em;">
         <h1 class="text-white text-center" style="margin-top:130px;">Have an account?  </h1>
         <br>
         <p style="margin-left: 150px;" class="text-white">Login and discover!</p>
@@ -131,5 +140,7 @@
   </div>
 </div>
 <!-- container -->
+
+<script src="js/sign.js"></script>
 </body>
 </html>

@@ -53,10 +53,10 @@
 .logsign:hover{
     text-decoration: none;
 }
- .log input[type="text"],input[type="password"]{
+ .log input[type="text"],input[type="password"],input[type="tel"],input[type="email"]{
     border-radius: 100px;
     background-color: whitesmoke;
-    margin-bottom: 15px;
+    /* margin-bottom: 5px; */
 }
 .signbtn{
     background-color: white;

@@ -58,21 +58,24 @@
             <div class="col-sm-12 col-lg-6">
     <div class="log">
         <img id="formlog"src="images/logo.png" alt="">
-    <form >
+    <form action="logged.html" onsubmit="return log()">
+      <div id="loguserr"></div>
         <div class="form-group">
-          
-          <input type="text" placeholder="username" class="form-control inp" id="exampleInputEmail1" >
+          <input type="text" placeholder="username" class="form-control inp" id="loguser" >
           </div>
-          
+          <div id="logpderr"></div>
         <div class="form-group">
           
-          <input type="password" placeholder="password" class="form-control inp" id="exampleInputPassword1">
+          <input type="password" placeholder="password" class="form-control inp" id="logpwd">
         </div>
+        
         <br>
-        <button id="login"type="submit" class="btn btn-primary">Log In</button>
+        <button id="login"type="submit"  class="btn btn-primary">Log In</button>
         <br><br>
         <a href="#" style="margin-left: 150px; text-decoration: none;">Forgot password?</a>
+        
     </form>
+   <button onclick="logo()">View</button>
     </div>
     
     <!-- log -->
@@ -123,5 +126,7 @@
   </div>
 </div>
 <!-- container -->
+
+<script src="js/log.js"></script>
 </body>
 </html>
